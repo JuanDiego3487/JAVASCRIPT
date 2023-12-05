@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        let n1 = Number(prompt("Ingrese la hora: "))
+        let n2;
+
+        if (n1 >= 0 && n1 <= 12) {
+            n2 = "AM"
+        }
+        else if ( n1 >= 12 && n1 <= 24) {
+            n2 = "PM"
+        }
+        
+
+        let salida = `La Hora es: ${n1} es ${n2} `;
+
+        console.log(salida)
+        alert(salida)
+
+        //  else if (43 = 43) {
+        //     let n4 = ""
+        // } else {
+        //     console.log("no se cumple")
+        // }
+
+        //let test = 54 > 85 ? "54 SI es menor que 85" : "54 no es mayor que 85"
+    </script> 
+</body>
+</html>
