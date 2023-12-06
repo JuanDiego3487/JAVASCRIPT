@@ -1,0 +1,26 @@
+function contarPalabra(texto, palabra) {
+    // Convertir el texto a minúsculas para hacer la comparación sin distinción entre mayúsculas y minúsculas
+    var textoEnMinusculas = texto.toLowerCase();
+    
+    // Dividir el texto en palabras
+    var palabras = textoEnMinusculas.split(/\s+/);
+    
+    // Inicializar el contador
+    var contador = 0;
+    
+    // Iterar sobre cada palabra y contar cuántas veces aparece la palabra buscada
+    for (var i = 0; i < palabras.length; i++) {
+        if (palabras[i] === palabra.toLowerCase()) {
+            contador++;
+        }
+    }
+    
+    return contador;
+}
+
+
+var texto = "Este es un ejemplo de texto. Este texto tiene palabras repetidas, como ejemplo.";
+var palabraBuscada = "ejemplo";
+var resultado = contarPalabra(texto, palabraBuscada);
+
+alert("La palabra '" + palabraBuscada + "' aparece " + resultado + " veces en el texto.");
