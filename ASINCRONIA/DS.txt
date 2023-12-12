@@ -1,0 +1,3 @@
+hilos de pagina
+
+Con el setTimeout puede hacer que asi en la linea de codigo este antes se pone despues en la pagina web
