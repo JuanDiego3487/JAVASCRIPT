@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+            let fechaEntrega = new Date(prompt("Ingrese la fecha que debio ser entregado el libro: "))
+            let fechaPactada = new Date(prompt("Ingrese la fecha pactada que el libro debio salir a la kaye: "))
+
+            console.log(fechaEntrega)
+            console.log(fechaPactada)
+
+
+            let diferenciaEnDias = fechaEntrega.getTime() - fechaPactada.getTime();
+            let = diferenciaEnDias / (1000 * 60 * 60 * 24);
+
+            let multa = 0;
+            if (diferenciaEnDias <= 3) {
+                multa = diferenciaEnDias * 7000;
+            } else {
+                multa = 10000;
+            }
+            //Datos de salida
+            let salida = `La diferencia de dias es de ${diferenciaEnDias} y tiene que pagar ${multa}`
+            console.log(salida)
+
+        
+    </script>
+</body>
+
+</html>
