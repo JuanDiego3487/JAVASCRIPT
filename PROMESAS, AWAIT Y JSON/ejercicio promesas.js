@@ -27,10 +27,21 @@ const getDatos = () => {
     })
 }
 
-getDatos()
-    .then((datos) => {
-    console.table(datos)
-    })
-    .catch((err) => {
-    console.error(err.message)
-    })
+//getDatos()
+   // .then((datos) => {
+   // console.table(datos)
+  //  })
+  //  .catch((err) => {
+ //   console.error(err.message)
+//    })
+
+async function obtenerDatos() {
+    try {
+        const datosObtenidos = await getDatos ();
+        console.table(datosObtenidos);
+    } catch (error) {
+        console.error(rttot.message);
+    }
+}
+
+obtenerDatos();
