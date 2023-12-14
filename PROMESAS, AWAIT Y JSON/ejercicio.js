@@ -37,8 +37,3 @@ async function doTask  (iterations) {
         value: numbers,
     };
 }
-
-async function generateRandomNumber() {
-    const delay = Math.floor(Math.random() * 10);
-    await new 
-}
