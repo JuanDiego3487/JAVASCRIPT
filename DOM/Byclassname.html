@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="miClase">Element 1</div>
+    <div class="miClase">Element 2</div>
+    <div class="miClase">Element 3</div>
+    <div class="miC ase">Element 3</div>
+
+
+    <script>
+        //Aca lo que hace el dom es devolver el valor del for en ves de los elements por que son class
+        let elementos = document.getElementsByClassName('miClase');
+
+        for ( let i = 0; i < elementos.length; i++) {
+            elementos[i].innerHTML = 'Nuevo contenido para ' + (i + 1);
+        }
+    </script>
+</body>
+</html>
