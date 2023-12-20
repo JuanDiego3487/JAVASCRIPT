@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ingrese los nombres:</p>
+    <label for="fnombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre">
+    <button onclick="agregarNombre()">Enviar</button>
+    <br><br>
+    <button onclick="limpiarNombres()">Limpiar</button>
+    <br><br>
+    <hr>
+
+    <ul id="lista"></ul>
+
+    <script>
+        let lista = [];
+
+        function agregarNombre() {
+            const nombre = document.getElementById("nombre").value;
+            lista.push(nombre);
+
+            document.getElementById("nombre").value = "";
+            mostrarLista();
+        }
+
+        function mostrarLista() {
+            const ul = document.getElementById("lista");
+            ul.innerHTML = "";
+
+    
+            lista.forEach(function(nombre) {
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(nombre));
+                ul.appendChild(li);
+            });
+        }
+
+
+        function limpiarNombres() {
+                        lista = [];
+            mostrarLista();
+        }
+    </script>
+</body>
+</html>
