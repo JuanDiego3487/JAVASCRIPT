@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <p>Hola a todos</p>
+            <p class="message">Hola, soy todo un Camper</p>
+        </div>
+    </div>
+    
+    <button onclick="prependElement()">Prepend parrafo</button>
+    <button onclick="appendElement()">append parrafo</button>
+    <button onclick="replaceChildrenElement()">Reemplazar</button>
+    <button onclick="removeElement()">Eliminar</button>
+    <script>
+        function prependElement() {
+            const div = document.querySelector("div");
+            const p = document.createElement("p");
+            p.innerHTML = "<span style='color:blue';>ESte es algo</span>";
+            div.prepend(p);
+        }
+        function appendElement() {
+            const div = document.querySelector("div");
+            const p = document.createElement("p");
+            p.innerHTML = "<span style='color:blue';>ESte es algo</span>";
+            div.append(p);
+        }
+        
+        function replaceChildrenElement() {
+            const div = document.querySelector("div");
+            const p = document.createElement("p");
+            p.innerHTML = "<span style='color:blue';>ESte es algo</span>";
+            div.replaceChildren(p);
+        }
+        
+        function removeElement() {
+            const div = document.querySelector("div");
+            div.remove();
+        }
+    </script>
+</body>
+</html>

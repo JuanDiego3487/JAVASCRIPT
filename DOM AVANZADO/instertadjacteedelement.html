@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" >
+        <div class="parent" >
+            <p>Hola a todos</p>
+            <p class="message">Hola, soy todo un Camper</p>
+        </div>
+    </div>
+    
+    <button onclick="insertAdjacentElement()">Insert Adjacent parrafo</button>
+    <button onclick="insertAdjHTML()">Insertar Adjacent HTML es lo mismo pero mas seguridad</button>
+    <button onclick="insertAdjacentText()">Insertar Adjacent HTML es lo mismo pero mas seguridad</button>
+    
+    
+
+    <script>
+        function insertAdjacentElement() {
+            const div = document.querySelector("div");
+            const p = document.createElement("p");
+            p.innerHTML = "<span style = 'color:red';>ESte es el contenido insertado</span>";
+
+            div.insertAdjacentElement("afterend", p)
+        }
+        function insertAdjHTML() {
+            const div = document.querySelector("div");
+            const str = "<p><span style = 'color:orange';>ESte es el contenido insertado</span></p>";
+            div.insertAdjacentHTML("afterend",str)
+        }
+        function insertAdjacentText() {
+            const div = document.querySelector("div");
+            const str = "<p><span style = 'color:orange'; 'border:1px solid red'>ESte es el contenido insertado</span></p>";
+            div.insertAdjacentText("afterbegin",str)
+        }
+    </script>
+</body>
+</html>

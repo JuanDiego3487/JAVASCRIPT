@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<fieldset> <legend>preferencias por favor</legend>
+<body>
+    
+    <br><br>
+        <label for="fechanac">Fecha de nacimiento: </label>
+        <input type="date" name="fechanac" id="fechanac">
+        <br>
+        <label for="archivo">Escoja un archivo</label>
+        <input type="file" name="archivo" id="archivo" accept=".png,.jpg,.gif" />
+
+        <br>
+
+        <input type="radio" name="intels" id="Ada" value="AMD">
+        <label for="intels">AMD</label>
+        <input type="radio" name="intels" id="Python" value="Intel i5" >
+        <label for="intels">Intel i5</label>
+        <input type="radio" name="intels" id="Java" value="Intel i7">
+        <label for="intels">Intel i7</label>
+
+    </fieldset>
+    
+    
+
+<fieldset><legend> preferencias por favor</legend>
+        <input type="radio" name="materias" id="Ada" value="Matematicas">
+        <label for="materias">Matematicas</label>
+        <input type="radio" name="materias" id="Python" value="Historia" >
+        <label for="materias">Historia</label>
+        <input type="radio" name="materias" id="Java" value="Geografia">
+        <label for="materias">Geografia</label>
+        <input type="radio" name="materias" id="Javascript" value="Lengua">
+        <label for="materias">Lengua</label>
+    <br>
+        <label for="fnombre">Nombre</label>
+        <input type="text" name="fnombre" id="fnombre" maxlength="21" minlength="1"  size="20"  pattern="[a-zA-Z]">
+
+    <br>
+    <label for="fnombre">Apellidos</label>
+    <input type="text" name="fapellido" id="fapellido" maxlength="21" minlength="1" size="20"  pattern="[a-zA-Z]">
+
+    <br>
+    <label for="fnombre">Direccion</label>
+    <input type="text" name="fdireccion" id="fdireccion" maxlength="21" minlength="1" size="20"  pattern="{1,15}[a-zA-Z]">
+
+    <br><br>
+    <label for="colorfav">Escoja un color: </label>
+    <input type="color" name="colorfav" id="colorfav">
+    <br><textarea name="comentarios" rows="10" cols="40" placeholder="Utilice este cuadro para escribir "></textarea>
+
+    <br>
+        <label for="fechanac">Elija una fecha: </label>
+        <input type="date" name="fechanac" id="fechanac">
+
+    <br>
+    <label for="hora">Elija la hora: </label>
+    <input type="time" name="hora" id="hora">
+
+    <br>
+    <label for="archivo">Escoja un archivo</label>
+    <input type="file" name="archivo" id="archivo" accept=".png,.jpg,.gif" />
+
+    <br>
+
+        <input type="checkbox" name="intels" id="Ada" value="Mujer">
+        <label for="intels">Mujer</label>
+        <input type="checkbox" name="intels" id="Python" value="Hombre" >
+        <label for="intels">Hombre</label>
+
+</fieldset>
+</body>
+</html>

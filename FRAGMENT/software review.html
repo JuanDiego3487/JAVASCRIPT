@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Name">Nombre del cliente:</label><br>
+<input type="text" id="Name" name="Name" /><br><br>
+
+<label for="Name">Nombre del cliente:</label><br>
+<input type="text" id="Name" name="Name" /><br><br>
+
+<p>Seleccione unas dimensiones para la caja:</p><br>
+
+<legend> preferencias por favor</legend>
+    <input type="radio" name="materias" id="Diminutas" value="Matematicas">
+    <label for="materias">Matematicas</label><br>
+    <input type="radio" name="materias" id="Medianas" value="Historia" >
+    <label for="materias">Historia</label><br>
+    <input type="radio" name="materias" id="Grandes" value="Geografia">
+    <label for="materias">Geografia</label><br><br>
+    
+    <label for="comentarios">Comentarios: </label>
+    <br><textarea name="comentarios" rows="10" cols="40" placeholder="Utilice este cuadro para escribir "></textarea>
+    <input type="button" id="btn" onclick="calculate()">
+    <script>
+        const calculate = () => {
+            const value = document.querySelector('[name=rBtn]:checked').value;
+            console.log(value)
+        }
+    </script>
+</body>
+</html>
