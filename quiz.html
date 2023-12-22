@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gestion de Tarjetas</h1>
+    <div id="container">
+    <h2>Crear Flashcard</h2>
+    <label for="fpregunta">Pregunta:</label>
+    <input type="text" name="pregunta" id="pregunta"><br><br>
+    <label for="fpregunta">Respuesta:</label>
+    <input type="text" name="pregunta" id="pregunta"><br><br>
+    
+
+    <button onclick="agregarpregunta()">Enviar</button>
+    
+    
+    <button onclick="limpiarpreguntas()">Limpiar</button>
+    <br><br>
+    
+
+    <ul id="lista"></ul>
+</div>
+<style>
+            #container {
+            width: 20%;
+            height: 20%;
+            border: solid 1px ;
+            box-shadow: black;
+            padding: 2%;
+            text-align: center;
+        }
+</style>
+    <script>
+        let lista = [];
+
+        function agregarpregunta() {
+            const pregunta = document.getElementById("pregunta").value;
+            lista.push(pregunta);
+
+            document.getElementById("pregunta").value = "";
+            mostrarLista();
+        }
+
+        function mostrarLista() {
+            const ul = document.getElementById("lista");
+            ul.innerHTML = "";
+
+    
+            lista.forEach(function(pregunta) {
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(pregunta));
+                ul.appendChild(li);
+            });
+        }
+
+
+        function limpiarpreguntas() {
+                        lista = [];
+            mostrarLista();
+        }
+
+        
+
+    </script>
+</body>
+</html>

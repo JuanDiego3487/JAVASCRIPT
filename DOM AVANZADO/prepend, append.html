@@ -17,6 +17,10 @@
     <button onclick="appendElement()">append parrafo</button>
 
     <script>
+        function innerDiv() {
+            const element = document.querySelector(".container");
+            alert(element.nodeName)
+        }
         function prependElement() {
             const div = document.querySelector("div");
             const p = document.createElement("p");

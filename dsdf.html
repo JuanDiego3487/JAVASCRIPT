@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1></h1>
-    <p>Ingrese los nombres:</p>
-    <label for="fnombre">Nombre:</label>
-    <input type="text" name="nombre" id="nombre">
-    <button onclick="agregarNombre()">Enviar</button>
-    <br><br>
-    <button onclick="limpiarNombres()">Limpiar</button>
-    <br><br>
-    <hr>
 
-    <ul id="lista"></ul>
+    <body>
 
+        <h1>Gestion de Tarjetas</h1>
+        <div id="container">
+            <h2>Crear Flashcard</h2>
+            <p>Pregunta</p>
+            <input type="text" name="nombre" id="nombre">
+            <p>Respuesta</p>
+            <input type="text" name="nombre" id="nombre">
+    <br><br>
+    
+            <button onclick="agregarNombre()">Guardar</button>
+        
+    
+    
+            <button onclick="limpiarNombres()">Cerrar</button>
+        
+        </div>
+
+    <style>
+
+        #container {
+            width: 20%;
+            height: 20%;
+            border: solid 1px ;
+            box-shadow: black;
+            padding: 2%;
+            text-align: center;
+        }
+        
+
+    </style>
     <script>
+
         let lista = [];
 
         function agregarNombre() {
@@ -46,6 +67,10 @@
                         lista = [];
             mostrarLista();
         }
+
+
+
     </script>
 </body>
+
 </html>
